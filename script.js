@@ -5,6 +5,8 @@ const btnDownload = document.querySelector(".btn-download");
 const api = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=";
 let qrcodeUrl;
 
+input.focus();
+
 input.addEventListener("keypress", () => {
   input.classList.remove("red");
 });
