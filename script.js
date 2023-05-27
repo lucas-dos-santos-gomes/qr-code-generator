@@ -19,17 +19,17 @@ btnQrCode.addEventListener("click", () => {
     btnDownload.classList.remove("hide");
   } else {
     input.classList.add("red");
-    console.log(input.value);
+    input.value = "";
   }
+  setTimeout(() => {
+    input.focus();
+  }, 100);
 });
 
 window.addEventListener("keydown", e => {
   if(e.key == "Enter") {
     input.blur();
     btnQrCode.click();
-    setTimeout(() => {
-      input.focus();
-    }, 100);
   }
 });
 
