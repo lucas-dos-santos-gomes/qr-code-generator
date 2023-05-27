@@ -34,6 +34,9 @@ btnQrCode.addEventListener("click", () => {
 // }
 
 // btnDownload.onclick = download;
+
+const clearUrl = url => url.replace(/^data:image\/\w+;base64,/, '');
+
 const downloadImage = (name, content, type) => {
   var link = document.createElement('a');
   link.style.display = "none";
@@ -46,5 +49,5 @@ const downloadImage = (name, content, type) => {
 }
 
 btnDownload.addEventListener("click", () => {
-  downloadImage('qr-code', img.src, "png");
+  downloadImage('qr-code', clearUrl(img.src), "png");
 });
