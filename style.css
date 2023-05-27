@@ -4,6 +4,7 @@
   border: none;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -35,9 +36,38 @@ main {
   gap: 20px;
 }
 
+.qrcode-img-container {
+  position: relative;
+}
+
+.qrcode-img-container:hover > .btn-download {
+  opacity: 1;
+}
+
+.qrcode-img-container:hover > .qrcode-img {
+  filter: brightness(0.4);
+}
+
 .qrcode-img {
   width: 200px;
   height: 200px;
+  transition: .2s;
+}
+
+.btn-download {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #810A8B;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  transition: .2s;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .qrcode-input {
@@ -53,12 +83,14 @@ main {
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   cursor: pointer;
   transition: .3s;
 }
 
 .qrcode-button:hover {
   transform: scale(1.1);
+  box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.75);
 }
 
 .qrcode-button:active {

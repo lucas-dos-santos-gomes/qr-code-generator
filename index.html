@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://github.com/lucas-dos-santos-gomes/lucas-dos-santos-gomes/assets/106649118/779c7615-cba7-41b3-8c77-3878188975d6" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
   <title>QR Code Generator</title>
 </head>
@@ -12,7 +13,10 @@
     <div class="container">
       <h1 class="single-title">QR Code Generator</h1>
       <div class="qrcode-container">
-        <img class="qrcode-img hide" src="" alt="QR Code" />
+        <div class="qrcode-img-container">
+          <img class="qrcode-img hide" src="" alt="QR Code" />
+          <button class="btn-download hide">Baixar imagem</button>
+        </div>
         <input class="qrcode-input" type="text" placeholder="Insira o link (url)" required />
         <button class="qrcode-button">Gerar QR Code</button>
       </div>
