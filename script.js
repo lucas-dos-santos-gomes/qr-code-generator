@@ -34,9 +34,6 @@ btnQrCode.addEventListener("click", () => {
 // }
 
 // btnDownload.onclick = download;
-
-const clearUrl = url => url.replace(/^data:image\/\w+;base64,/, '');
-
 const downloadImage = (name, content, type) => {
   var link = document.createElement('a');
   link.style.display = "none";
@@ -47,17 +44,7 @@ const downloadImage = (name, content, type) => {
   link.click();
   document.body.removeChild(link);
 }
-/*
-['png', 'jpg', 'gif'].forEach(type => {
-  var download = document.querySelector(`#${type}`);
-  download.addEventListener('click', function() {
-    var img = document.querySelector('#img');
-
-    downloadImage('myImage', clearUrl(img.src), type);
-  });
-});
-*/
 
 btnDownload.addEventListener("click", () => {
-  downloadImage('myImage', clearUrl(img.src), ".png");
+  downloadImage('qr-code', img.src, "png");
 });
