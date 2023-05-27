@@ -24,6 +24,10 @@ main {
   text-align: center;
 }
 
+.single-title {
+  margin-bottom: 20px;
+}
+
 .qrcode-container {
   display: flex;
   flex-direction: column;
@@ -62,6 +66,11 @@ main {
   transform: scale(0.95)
 }
 
+.red::placeholder {
+  color: #F00;
+  font-weight: bold;
+}
+
 .hide {
-  visibility: hidden;
+  display: none;
 }
