@@ -22,6 +22,12 @@ btnQrCode.addEventListener("click", () => {
   }
 });
 
+window.addEventListener("keydown", e => {
+  if(e.key == "Enter") {
+    btnQrCode.click();
+  }
+});
+
 /* DOWNLOAD */
 
 function download(a, url) {
