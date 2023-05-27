@@ -12,19 +12,24 @@ input.addEventListener("keypress", () => {
 });
 
 btnQrCode.addEventListener("click", () => {
-  if(input.value != "") {
+  if(input.value != "" && input.value.indexOf(" ") < 0) {
     qrcodeUrl = `${api}${input.value}`;
     img.src = qrcodeUrl;
     img.classList.remove("hide");
     btnDownload.classList.remove("hide");
   } else {
     input.classList.add("red");
+    console.log(input.value);
   }
 });
 
 window.addEventListener("keydown", e => {
   if(e.key == "Enter") {
+    input.blur();
     btnQrCode.click();
+    setTimeout(() => {
+      input.focus();
+    }, 100);
   }
 });
 
